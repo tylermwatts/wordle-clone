@@ -1,0 +1,12 @@
+.keyboard {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.keyboardRow {
+	margin: 0.25rem auto;
+	display: inline-flex;
+	gap: 0.5rem;
+	flex-direction: row;
+}

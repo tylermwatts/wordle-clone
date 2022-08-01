@@ -1,0 +1,33 @@
+.letterBlock {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	border: 2px solid black;
+	height: 64px;
+	width: 64px;
+	color: white;
+	padding: 0.25rem;
+}
+
+.keyboardLetter {
+	height: 48px;
+	width: 48px;
+	border-radius: 0.5rem;
+}
+
+.keyboardLetter:hover {
+	background-color: dimgray;
+}
+
+.correct {
+	background-color: green;
+}
+
+.included {
+	background-color: goldenrod;
+}
+
+.incorrect {
+	background-color: dimgray;
+}
