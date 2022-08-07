@@ -40,11 +40,18 @@ export const LetterRow: React.FC<LetterRowProps> = ({
 						return acc
 					}, [])
 
-				if (
-					occurrencesOfLetter.length === 1 &&
-					value[occurrencesOfLetter[0]] === todaysWord[occurrencesOfLetter[0]]
-				) {
-					return 'incorrect'
+				if (occurrencesOfLetter.length === 1) {
+					if (
+						value[occurrencesOfLetter[0]] ===
+							todaysWord[occurrencesOfLetter[0]] ||
+						value.indexOf(letterValue) < indexToCheck
+					) {
+						// letter only occurs once in correct word and the guess already has the single occurrence in the correct position
+						// or the guess has the correct letter more than once
+						return 'incorrect'
+					} else {
+						return 'included'
+					}
 				} else {
 					return 'included'
 				}
