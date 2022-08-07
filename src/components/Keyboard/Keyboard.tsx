@@ -4,11 +4,14 @@ import { LetterBlock, LetterBlockProps } from '../LetterBlock/LetterBlock'
 // hooks/queries
 import { useTodaysWord } from '../../queries'
 
+// types/interfaces
+import { GuessRecord } from './../../interfaces'
+
 // styles
 import styles from './Keyboard.module.css'
 
 export interface KeyboardProps {
-	guesses: Record<number, string>
+	guesses: GuessRecord
 	onClick: (letterKey: string) => void
 }
 
@@ -35,7 +38,7 @@ export const Keyboard: React.FC<KeyboardProps> = ({ guesses, onClick }) => {
 						return acc
 					}, [])
 				for (const key in guesses) {
-					const currentGuess = guesses[key]
+					const currentGuess = guesses[key as unknown as keyof GuessRecord]
 					if (occurrencesOfLetter.includes(currentGuess.indexOf(letter))) {
 						indicator = 'correct'
 					}

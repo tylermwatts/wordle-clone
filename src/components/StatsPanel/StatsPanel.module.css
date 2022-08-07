@@ -1,0 +1,59 @@
+.recordContainer {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.sectionHeader {
+	text-transform: uppercase;
+	letter-spacing: 0.125rem;
+	font-weight: bold;
+	transform: scale(1, 0.85);
+}
+
+.statistics {
+	display: inline-flex;
+	flex-direction: row;
+	gap: 1rem;
+	justify-content: center;
+	margin: 1rem auto;
+}
+
+.distribution {
+	padding: 1rem;
+}
+
+.statBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.stat {
+	font-size: 2rem;
+}
+
+.statLabel {
+	font-size: 0.75rem;
+}
+
+.guessDistributionRow {
+	display: inline-flex;
+	flex-direction: row;
+	gap: 1rem;
+	width: 100%;
+}
+
+.guessBar {
+	display: flex;
+	justify-content: flex-end;
+	color: #f1f1f1;
+	background-color: #787c7e;
+	min-width: 0.75rem;
+	font-weight: 450;
+	padding-right: 0.25rem;
+}
+
+.isTodaysGuess {
+	background-color: green;
+}

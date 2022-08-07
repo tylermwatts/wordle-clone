@@ -9,3 +9,21 @@
 	flex-direction: column;
 	margin: 1rem;
 }
+
+.modalContent {
+	display: flex;
+	flex-direction: column;
+	min-height: 400px;
+	min-width: 400px;
+	height: 50vh;
+	width: 50vw;
+}
+
+.closeButton {
+	margin-left: auto;
+	font-weight: bold;
+	line-height: 150%;
+	font-size: 1rem;
+	cursor: pointer;
+	padding: 1rem;
+}
